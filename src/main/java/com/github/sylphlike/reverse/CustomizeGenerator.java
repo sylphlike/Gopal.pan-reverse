@@ -80,7 +80,7 @@ public class CustomizeGenerator implements CommentGenerator {
 
         String actualColumnName = introspectedColumn.getActualColumnName();
 
-        field.addJavaDocLine("/**  database field name ["+  actualColumnName + "] , field name comment [" +  remarks +  "]  */");
+        field.addJavaDocLine("/**  "+  actualColumnName + ", comment [" +  remarks +  "]  */");
 
     }
 
@@ -92,15 +92,7 @@ public class CustomizeGenerator implements CommentGenerator {
      */
     @Override
     public void addGeneralMethodComment(Method method, IntrospectedTable introspectedTable) {
-        if (suppressAllComments) {
-            return;
-        }
-        method.addJavaDocLine("/**");
-        method.addJavaDocLine(" * ");
-        method.addJavaDocLine(" * <p>  time  " + DateUtils.getDateString() +  "  (dd/MM/YYYY HH:mm)   ");
-        method.addJavaDocLine(" * <p> email  15923508369@163.com  ");
-        method.addJavaDocLine(" * @author  Gopal.pan");
-        method.addJavaDocLine(" */");
+
     }
 
 
