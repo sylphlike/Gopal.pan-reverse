@@ -11,6 +11,8 @@
 
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
         <plugin type="com.github.sylphlike.reverse.CustomizeBatisPlugin" />
+        <!--xml文件内容去重-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
 
         <commentGenerator type="com.github.sylphlike.reverse.CustomizeGenerator">
             <!-- 是否去除自动生成的注解true:是, false:否 -->
